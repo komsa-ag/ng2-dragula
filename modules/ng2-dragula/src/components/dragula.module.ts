@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { DragulaDirective } from './dragula.directive';
 import { DragulaService } from './dragula.service';
 
@@ -7,7 +7,7 @@ import { DragulaService } from './dragula.service';
   declarations: [DragulaDirective],
 })
 export class DragulaModule {
-  static forRoot(): ModuleWithProviders<any> {
+  static forRoot(): ModuleWithProviders<DragulaModule> {
     return {
       ngModule: DragulaModule,
       providers: [DragulaService]
